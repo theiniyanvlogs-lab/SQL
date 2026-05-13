@@ -1,0 +1,75 @@
+In SQL, DQL means Data Query Language.
+
+DQL is used to retrieve/view data from the database.
+
+The main DQL command is:
+
+Command	Purpose
+SELECT	Fetch data from tables
+SELECT Statement
+
+Used to read data from a table.
+
+Syntax
+SELECT column_name
+FROM table_name;
+Examples
+1. View all data
+SELECT * FROM students;
+
+Meaning:
+
+* → all columns
+Shows complete table data.
+2. View specific columns
+SELECT first_name, email
+FROM students;
+
+Shows only:
+
+first_name
+email
+3. Using WHERE condition
+SELECT *
+FROM students
+WHERE age > 18;
+
+Shows students whose age is greater than 18.
+
+Common Clauses Used with SELECT
+Clause	Purpose
+WHERE	Filter rows
+ORDER BY	Sort data
+GROUP BY	Group similar data
+HAVING	Filter grouped data
+LIMIT	Restrict number of rows
+Example with ORDER BY
+SELECT *
+FROM students
+ORDER BY marks DESC;
+
+Displays highest marks first.
+
+Easy Understanding
+
+Think of a table like Excel data:
+
+DQL = Searching/viewing rows
+SELECT = Read data only
+Does not modify data
+
+--------
+
+Difference Between SQL Languages
+
+| Type | Purpose              | Example              |
+| ---- | -------------------- | -------------------- |
+| DDL  | Define structure     | `CREATE`, `ALTER`    |
+| DML  | Modify data          | `INSERT`, `UPDATE`   |
+| DQL  | Retrieve data        | `SELECT`             |
+| TCL  | Control transactions | `COMMIT`, `ROLLBACK` |
+| DCL  | Control permissions  | `GRANT`, `REVOKE`    |
+
+
+======
+
