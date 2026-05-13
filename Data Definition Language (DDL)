@@ -46,7 +46,7 @@ Changes table name.
 RENAME TABLE students TO student_details;
 Easy Understanding
 
-Think of a database table like a house:
+#Think of a database table like a house:#
 
 CREATE → Build house
 ALTER → Renovate house
