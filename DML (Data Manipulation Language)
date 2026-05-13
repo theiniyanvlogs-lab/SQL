@@ -1,0 +1,64 @@
+In SQL, DML means Data Manipulation Language.
+
+It is used to manage and modify data inside tables.
+
+Main DML Commands
+
+| Command   | Purpose                    |
+| --------- | -------------------------- |
+| `INSERT`  | Add new data into a table  |
+| `UPDATE`  | Modify existing data       |
+| `DELETE`  | Remove data from a table   |
+| `SELECT`* | Retrieve data from a table |
+
+
+SELECT is sometimes separately called DQL (Data Query Language), but many beginners include it under DML.
+
+Examples
+1. INSERT
+
+Adds a new record.
+
+INSERT INTO students (id, name, age)
+VALUES (1, 'Arun', 20);
+2. UPDATE
+
+Changes existing data.
+
+UPDATE students
+SET age = 21
+WHERE id = 1;
+3. DELETE
+
+Removes data.
+
+DELETE FROM students
+WHERE id = 1;
+4. SELECT
+
+Displays data.
+
+SELECT * FROM students;
+
+
+Simple Understanding
+
+DDL → Creates structure
+Example: CREATE, ALTER, DROP
+
+DML → Works with data inside tables
+Example: INSERT, UPDATE, DELETE
+
+DCL → Controls permissions
+Example: GRANT, REVOKE
+
+TCL → Transaction control
+Example: COMMIT, ROLLBACK
+Real-life Example
+
+Think of a table like an Excel sheet:
+
+INSERT → Add new row
+UPDATE → Edit row
+DELETE → Remove row
+SELECT → View rows
