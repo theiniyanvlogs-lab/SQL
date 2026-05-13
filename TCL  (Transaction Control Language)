@@ -1,0 +1,86 @@
+In SQL, TCL means Transaction Control Language.
+
+TCL is used to control transactions in a database.
+
+A transaction is a group of SQL operations treated as one unit.
+
+Main TCL Commands
+
+| Command           | Purpose                    |
+| ----------------- | -------------------------- |
+| `COMMIT`          | Save changes permanently   |
+| `ROLLBACK`        | Undo changes               |
+| `SAVEPOINT`       | Create a checkpoint        |
+| `SET TRANSACTION` | Set transaction properties |
+
+
+Easy Understanding
+
+Imagine editing a document:
+
+COMMIT → Save file
+ROLLBACK → Undo changes
+SAVEPOINT → Create restore point
+Example
+1. COMMIT
+UPDATE students
+SET marks = 90
+WHERE id = 1;
+
+COMMIT;
+
+Meaning:
+
+Changes are saved permanently.
+2. ROLLBACK
+DELETE FROM students
+WHERE id = 2;
+
+ROLLBACK;
+
+Meaning:
+
+Delete operation is cancelled.
+Data comes back.
+3. SAVEPOINT
+SAVEPOINT sp1;
+
+Creates a checkpoint.
+
+Later:
+
+ROLLBACK TO sp1;
+
+Returns database to that savepoint.
+
+Real-life Example
+
+Suppose a bank transfer:
+
+Money deducted from Account A
+Money added to Account B
+
+If system crashes in between:
+
+ROLLBACK restores original balance.
+
+If successful:
+
+COMMIT saves transaction permanently.
+Important Point
+
+TCL mostly works with DML commands like:
+
+INSERT
+UPDATE
+DELETE
+
+because these change data.
+
+Difference
+Type	Purpose
+DDL	Structure of database
+DML	Manipulate data
+TCL	Control transactions
+DCL	Control permissions
+
