@@ -1,0 +1,65 @@
+In SQL, DDL means Data Definition Language.
+
+DDL is used to create and manage database structure like tables, databases, columns, etc.
+
+Main DDL Commands
+
+| Command    | Purpose                           |
+| ---------- | --------------------------------- |
+| `CREATE`   | Create database or table          |
+| `ALTER`    | Modify table structure            |
+| `DROP`     | Delete table/database permanently |
+| `TRUNCATE` | Remove all rows but keep table    |
+| `RENAME`   | Change table name                 |
+
+
+Examples
+1. CREATE
+
+Creates a table.
+
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT
+);
+2. ALTER
+
+Adds or changes columns.
+
+ALTER TABLE students
+ADD marks INT;
+3. DROP
+
+Deletes the entire table.
+
+DROP TABLE students;
+4. TRUNCATE
+
+Deletes all data but keeps table structure.
+
+TRUNCATE TABLE students;
+5. RENAME
+
+Changes table name.
+
+RENAME TABLE students TO student_details;
+Easy Understanding
+
+Think of a database table like a house:
+
+CREATE → Build house
+ALTER → Renovate house
+DROP → Destroy house
+TRUNCATE → Empty house
+RENAME → Change house name
+
+
+Difference Between DDL and DML
+| DDL                       | DML                          |
+| ------------------------- | ---------------------------- |
+| Works on table structure  | Works on table data          |
+| `CREATE`, `ALTER`, `DROP` | `INSERT`, `UPDATE`, `DELETE` |
+| Changes schema            | Changes records              |
+
+Changes schema	Changes records
